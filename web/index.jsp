@@ -20,7 +20,7 @@
     <jsp:param name="flag" value="1"></jsp:param>
 </jsp:include>
 
-<div class="category">s
+<div class="category">
 <div class="row-1">
     <div class="column">
             <a  href="/goods_list">全部</a>
