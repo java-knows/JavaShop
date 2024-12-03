@@ -20,7 +20,7 @@
     <jsp:param name="flag" value="1"></jsp:param>
 </jsp:include>
 
-<div class="category">
+<div class="category">s
 <div class="row-1">
     <div class="column">
             <a  href="/goods_list">全部</a>
@@ -58,20 +58,19 @@
                         <c:when test="${status.first}">
                             <div class="item active">
                                 <h2 class="hdng"><a href="/goods_detail?id=${g.id}">${g.name}</a><span></span></h2>
-                                <p>${g.cover}</p>
+                                <p>今日推荐</p>
                                 <a class="banner_a" href="javascript:;" onclick="buy(${g.id})">加入购物车</a>
                                 <div class="banner-text">
                                     <a href="/goods_detail?id=${g.id}">
                                         <img src="${g.cover}" alt="${g.name}" width="350" height="350">
                                     </a>
-
                                 </div>
                             </div>
                         </c:when>
                         <c:otherwise>
                             <div class="item">
                                 <h2 class="hdng"><a href="/goods_detail?id=${g.id}">${g.name}</a><span></span></h2>
-                                <p>${g.cover}</p>
+                                <p>今日推荐</p>
                                 <a class="banner_a" href="javascript:;" onclick="buy(${g.id})">加入购物车</a>
                                 <div class="banner-text">
                                     <a href="/goods_detail?id=${g.id}">
