@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="JavaShop">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaShop</output-path>
+    <root id="archive" name="JavaShop.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JavaShop" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="JavaShop/web/Web" />
+    </root>
+  </artifact>
+</component>
