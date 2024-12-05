@@ -4,7 +4,7 @@ import java.sql.SQLException;
 
 public class DBTest {
 
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/javashop";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/javashop?serverTimezone=UTC"; // 添加时区参数
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASSWORD = "16500";
 
@@ -43,7 +43,6 @@ public class DBTest {
         // 如果执行到这里，则表示连接失败
         return false;
     }
-
 
     public static void main(String[] args) {
         boolean isSuccess = isConnectionSuccessful();

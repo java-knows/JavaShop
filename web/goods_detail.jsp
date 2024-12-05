@@ -10,7 +10,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-	<link type="text/css" rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/flexslider.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
@@ -25,6 +24,63 @@
 		  });
 		});
 	</script>
+	<style>
+		.single {
+			padding: 40px 0;
+			background: #f5f6fa;
+		}
+		.single-grid {
+			background: #fff;
+			padding: 20px;
+			border-radius: 8px;
+			box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+		}
+		.flexslider {
+			border: none;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		.flexslider img {
+			border-radius: 8px;
+		}
+		.single-grid h3 {
+			color: #2c3e50;
+			font-size: 24px;
+			margin: 20px 0;
+		}
+		.tag {
+			margin: 15px 0;
+		}
+		.tag a {
+			color: #3498db;
+			text-decoration: none;
+		}
+		.prices {
+			margin: 20px 0;
+		}
+		.item_price {
+			color: #e74c3c;
+			font-size: 24px;
+			font-weight: 600;
+		}
+		.add-cart {
+			display: inline-block;
+			padding: 10px 30px;
+			background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+			color: #fff;
+			border-radius: 25px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			font-weight: 500;
+			margin-top: 20px;
+		}
+		.add-cart:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(46,204,113,0.3);
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
 </head>
 <body>
 	 
@@ -74,16 +130,6 @@
 					<div class="btn_form">
 						<a href="javascript:;" class="add-cart item_add" onclick="buy(${g.id})">加入购物车</a>
 					</div>
-				</div>
-				<div class="col-md-4 single-grid1">
-					<!-- <h2>商品分类</h2> -->
-					<ul>
-                        <li><a  href="/goods_list">全部</a></li>
-
-                        <c:forEach items="${typeList}" var="t">
-                            <li><a href="/goods_list?typeid=${t.id}">${t.name}</a></li>
-                        </c:forEach>
-					</ul>
 				</div>
 				<div class="clearfix"> </div>
 			</div>

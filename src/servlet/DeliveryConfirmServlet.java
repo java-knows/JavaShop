@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
 
 @WebServlet(name = "delivery_confirm",urlPatterns = "/delivery_confirm")
 public class DeliveryConfirmServlet extends HttpServlet {
@@ -21,10 +23,12 @@ public class DeliveryConfirmServlet extends HttpServlet {
         User u = (User) request.getSession().getAttribute("user");
         oService.updateStatus(id, status);
         String recipientEmail = u.getEmail();
+        Set<String> set = new HashSet<>();
+        set.add(recipientEmail);
         String subject = "订单确认收货通知";
         String content = "您好，您购买的订单号：" + id + " 已确认收货。感谢您的支持！";
         try {
-            EmailUtils.sendEmail(recipientEmail, subject, content);
+            EmailUtils.sendEmail(set, subject, content);
             response.getWriter().print("ok");
 
         } catch (Exception e) {
